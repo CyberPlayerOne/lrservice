@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:864496252688:task-definition/linear-regression-service-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-southeast-2:864496252688:task-definition/linear-regression-service-task:3",
     "containerDefinitions": [
         {
             "name": "lr_service_container",
-            "image": "864496252688.dkr.ecr.ap-southeast-2.amazonaws.com/linear_regression_service/lr-service:v1",
+            "image": "864496252688.dkr.ecr.ap-southeast-2.amazonaws.com/linear_regression_service:f4941bce85f3d1a7cb3f4357d9446702630a1f21",
             "cpu": 0,
             "portMappings": [
                 {
@@ -16,10 +16,8 @@
             ],
             "essential": true,
             "environment": [],
-            "environmentFiles": [],
             "mountPoints": [],
             "volumesFrom": [],
-            "ulimits": [],
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
@@ -34,7 +32,7 @@
     "family": "linear-regression-service-task",
     "executionRoleArn": "arn:aws:iam::864496252688:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -71,13 +69,13 @@
     "requiresCompatibilities": [
         "FARGATE"
     ],
-    "cpu": "1024",
-    "memory": "3072",
+    "cpu": "2048",
+    "memory": "5120",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-05-30T10:46:00.496Z",
+    "registeredAt": "2023-05-30T11:43:35.984Z",
     "registeredBy": "arn:aws:iam::864496252688:user/tyler_iam_user",
     "tags": []
 }

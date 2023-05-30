@@ -1,0 +1,13 @@
+benchmark.py
+*.png
+Makefile
+simple_linear_regr*
+
+**/*.pyc
+**/*.pyo
+**/*.mo
+../.gitignore
+.git/
+**/__pycache__/
+Dockerfile
+**/*.md

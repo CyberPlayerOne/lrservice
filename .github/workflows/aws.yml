@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: linear_regression_service           # set this to your Amazon ECR repository name
   ECS_SERVICE: lr_ecs_service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: linear-regression-service                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: ./linear-regression-service-task-revision1.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: .github/workflows/linear-regression-service-task-revision1.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: lr_service_container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition

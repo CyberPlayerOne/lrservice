@@ -3,10 +3,13 @@ SHELL := /bin/bash
 train_and_save:
 	python lrservice/simple_linear_regr.py
 
-test_batch_api:
+test_batch_api_aws:
+	curl -X POST -H 'Content-Type: application/json' -d '[[1],[2],[3],[4]]' http://13.55.50.18:5002/batch
+test_stream_api_aws:
+	curl -X POST -H 'Content-Type: application/json' -d '[8]' http://13.55.50.18:5002/stream
+test_batch_api_local:
 	curl -X POST -H 'Content-Type: application/json' -d '[[1],[2],[3],[4]]' http://127.0.0.1:5002/batch
-
-test_stream_api:
+test_stream_api_local:
 	curl -X POST -H 'Content-Type: application/json' -d '[8]' http://127.0.0.1:5002/stream
 
 test_gunicorn_local:

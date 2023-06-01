@@ -6,7 +6,7 @@ long_description = "A python package for demonstrating how to make REST API serv
 
 setuptools.setup(
     name="lrservice",
-    version="0.0.3",
+    version="0.0.4",
     author="Tyler Tang",
     author_email="tyler.x.tang@outlook.com",
     description="A python package for demonstrating how to make REST API service for linear regression",

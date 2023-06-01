@@ -17,6 +17,8 @@ def home():
 def stream():
     """
     The func takes a payload of one record and return the prediction for that record.
+    Examples:
+        curl -X POST -H 'Content-Type: application/json' -d '[8]' http://127.0.0.1:5000/stream
     """
     input_data = request.get_json()
     try:
@@ -34,9 +36,9 @@ def stream():
 @app.route('/batch', methods=['POST'])
 def batch():
     """
-    The func takes an array of multiple records and return an array of predictions. </br>
-    Example:
-        curl -X POST -H 'Content-Type: application/json' -d '[[1],[2],[3],[4]]' http://127.0.0.1:5001/batch
+    The func takes an array of multiple records and return an array of predictions.
+    Examples:
+        curl -X POST -H 'Content-Type: application/json' -d '[[1],[2],[3],[4]]' http://127.0.0.1:5000/batch
     """
     input_data = request.get_json()
     try:
